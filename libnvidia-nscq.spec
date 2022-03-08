@@ -8,7 +8,7 @@
 
 Name:           %(echo %real_name | tr '_' '-')
 Epoch:          1
-Version:        510.39.01
+Version:        510.47.03
 Release:        1%{?dist}
 Summary:        NVSwitch Configuration and Query Library (NSCQ)
 License:        NVIDIA Driver
@@ -59,6 +59,9 @@ cp -fr lib/lib* %{buildroot}%{_libdir}/
 %{_libdir}/%{name}.so
 
 %changelog
+* Tue Mar 08 2022 Simone Caronni <negativo17@gmail.com> - 1:510.47.03-1
+- Update to 510.47.03 (CUDA 11.6.1).
+
 * Fri Jan 28 2022 Simone Caronni <negativo17@gmail.com> - 1:510.39.01-1
 - First build with the new tarball components.
 
