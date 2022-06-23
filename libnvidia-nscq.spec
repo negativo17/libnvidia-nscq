@@ -8,7 +8,7 @@
 
 Name:           %(echo %real_name | tr '_' '-')
 Epoch:          1
-Version:        510.47.03
+Version:        515.43.04
 Release:        1%{?dist}
 Summary:        NVSwitch Configuration and Query Library (NSCQ)
 License:        NVIDIA Driver
@@ -59,6 +59,9 @@ cp -fr lib/lib* %{buildroot}%{_libdir}/
 %{_libdir}/%{name}.so
 
 %changelog
+* Thu Jun 23 2022 Simone Caronni <negativo17@gmail.com> - 1:515.43.04-1
+- Update to 515.43.04.
+
 * Tue Mar 08 2022 Simone Caronni <negativo17@gmail.com> - 1:510.47.03-1
 - Update to 510.47.03 (CUDA 11.6.1).
 
