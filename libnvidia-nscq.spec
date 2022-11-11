@@ -4,11 +4,11 @@
 %global __strip /bin/true
 %global _missing_build_ids_terminate_build 0
 %global _build_id_links none
-%global major_package_version 11-6
+%global major_package_version 11-8
 
 Name:           %(echo %real_name | tr '_' '-')
 Epoch:          1
-Version:        515.65.01
+Version:        520.61.05
 Release:        1%{?dist}
 Summary:        NVSwitch Configuration and Query Library (NSCQ)
 License:        NVIDIA Driver
@@ -59,6 +59,9 @@ cp -fr lib/lib* %{buildroot}%{_libdir}/
 %{_libdir}/%{name}.so
 
 %changelog
+* Fri Nov 11 2022 Simone Caronni <negativo17@gmail.com> - 1:520.61.05-1
+- Update to 520.61.05.
+
 * Sun Sep 04 2022 Simone Caronni <negativo17@gmail.com> - 1:515.65.01-1
 - Update to 515.65.01.
 
