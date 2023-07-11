@@ -16,6 +16,7 @@ URL:            https://developer.nvidia.com/cuda-toolkit
 ExclusiveArch:  x86_64
 
 Source0:        https://developer.download.nvidia.com/compute/cuda/redist/%{real_name}/linux-x86_64/%{real_name}-linux-x86_64-%{version}-archive.tar.xz
+Source1:        https://developer.download.nvidia.com/compute/cuda/redist/%{real_name}/linux-sbsa/%{real_name}-linux-sbsa-%{version}-archive.tar.xz
 
 %description
 The NSCQ library currently provides topology information of the NVSwitches and
@@ -35,12 +36,8 @@ Library (NSCQ).
 %setup -q -n %{real_name}-linux-x86_64-%{version}-archive
 %endif
 
-%ifarch ppc64le
-%setup -q -T -b 1 -n %{real_name}-linux-ppc64le-%{version}-archive
-%endif
-
 %ifarch aarch64
-%setup -q -T -b 2 -n %{real_name}-linux-sbsa-%{version}-archive
+%setup -q -T -b 1 -n %{real_name}-linux-aarch64-%{version}-archive
 %endif
 
 %install
