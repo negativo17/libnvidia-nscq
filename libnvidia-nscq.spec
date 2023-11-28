@@ -8,12 +8,12 @@
 
 Name:           %(echo %real_name | tr '_' '-')
 Epoch:          1
-Version:        535.104.05
+Version:        545.23.08
 Release:        1%{?dist}
 Summary:        NVSwitch Configuration and Query Library (NSCQ)
 License:        NVIDIA Driver
 URL:            https://developer.nvidia.com/cuda-toolkit
-ExclusiveArch:  x86_64
+ExclusiveArch:  aarch64 x86_64
 
 Source0:        https://developer.download.nvidia.com/compute/cuda/redist/%{real_name}/linux-x86_64/%{real_name}-linux-x86_64-%{version}-archive.tar.xz
 Source1:        https://developer.download.nvidia.com/compute/cuda/redist/%{real_name}/linux-sbsa/%{real_name}-linux-sbsa-%{version}-archive.tar.xz
@@ -37,7 +37,7 @@ Library (NSCQ).
 %endif
 
 %ifarch aarch64
-%setup -q -T -b 1 -n %{real_name}-linux-aarch64-%{version}-archive
+%setup -q -T -b 1 -n %{real_name}-linux-sbsa-%{version}-archive
 %endif
 
 %install
@@ -56,6 +56,9 @@ cp -fr lib/lib* %{buildroot}%{_libdir}/
 %{_libdir}/%{name}.so
 
 %changelog
+* Tue Nov 28 2023 Simone Caronni <negativo17@gmail.com> - 1:545.23.08-1
+- Update to 545.23.08.
+
 * Thu Sep 28 2023 Simone Caronni <negativo17@gmail.com> - 1:535.104.05-1
 - Update to 535.104.05.
 
