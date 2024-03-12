@@ -8,7 +8,7 @@
 
 Name:           %(echo %real_name | tr '_' '-')
 Epoch:          1
-Version:        545.23.08
+Version:        550.54.14
 Release:        1%{?dist}
 Summary:        NVSwitch Configuration and Query Library (NSCQ)
 License:        NVIDIA Driver
@@ -56,6 +56,9 @@ cp -fr lib/lib* %{buildroot}%{_libdir}/
 %{_libdir}/%{name}.so
 
 %changelog
+* Tue Mar 12 2024 Simone Caronni <negativo17@gmail.com> - 1:550.54.14-1
+- Update to 550.54.14.
+
 * Tue Nov 28 2023 Simone Caronni <negativo17@gmail.com> - 1:545.23.08-1
 - Update to 545.23.08.
 
